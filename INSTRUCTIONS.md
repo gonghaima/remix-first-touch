@@ -29,8 +29,23 @@ export const links: LinksFunction = () => [
 mkdir app/routes
 touch app/routes/contacts.\$contactId.tsx
 ```
+
 In the Remix route file convention, . will create a / in the URL and $ makes a segment dynamic. We just created a route that will match URLs that look like this:
 
     /contacts/123
     /contacts/abc
+
+👉 Add the contact component UI
+
+```cmd
+app/routes/contacts.$contactId.tsx
+```
+
+## Client Side Routing
+
+👉 Change the sidebar <a href> to <Link to>
+
+## Nested Routes and Outlets
+
+👉 Render an <Outlet />
 
