@@ -49,3 +49,7 @@ app/routes/contacts.$contactId.tsx
 
 👉 Render an <Outlet />
 
+## Loading Data
+
+
+
