@@ -51,5 +51,22 @@ app/routes/contacts.$contactId.tsx
 
 ## Loading Data
 
+👉 Export a loader function from app/root.tsx and render the data
 
+```
+ const { contacts } = useLoaderData();
+```
 
+## Type Inference
+
+```
+const { contacts } = useLoaderData<typeof loader>();
+```
+
+## URL Params in Loaders
+
+👉 Click on one of the sidebar links
+
+```
+const contact = await getContact(params.contactId);
+```
