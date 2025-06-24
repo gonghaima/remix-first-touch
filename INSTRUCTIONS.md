@@ -70,3 +70,6 @@ const { contacts } = useLoaderData<typeof loader>();
 ```
 const contact = await getContact(params.contactId);
 ```
+
+## Validating Params and Throwing Responses
+
