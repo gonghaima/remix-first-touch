@@ -73,3 +73,10 @@ const contact = await getContact(params.contactId);
 
 ## Validating Params and Throwing Responses
 
+## Data Mutations
+
+Without client side routing, the browser will serialize the form's data automatically and send it to the server as the request body for POST, and as URLSearchParams for GET. Remix does the same thing, except instead of sending the request to the server, it uses client side routing and sends it to the route's action function.
+
+## Creating Contacts
+
+👉 Export an action function from app/root.tsx
