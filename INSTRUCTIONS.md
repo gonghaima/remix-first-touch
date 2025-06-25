@@ -80,3 +80,5 @@ Without client side routing, the browser will serialize the form's data automati
 ## Creating Contacts
 
 👉 Export an action function from app/root.tsx
+
+## Updating Data
