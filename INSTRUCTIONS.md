@@ -88,3 +88,14 @@ Without client side routing, the browser will serialize the form's data automati
 The edit route we just created already renders a form. All we need to do is add the action function. Remix will serialize the form, POST it with fetch, and automatically revalidate all the data.
 
 ## Redirecting new records to the edit page
+```
+// existing imports
+import { redirect } from "@remix-run/node";
+// existing imports
+
+export const action = async () => {
+  const contact = await createEmptyContact();
+  return redirect(`/contacts/${contact.id}/edit`);
+};
+```
+## Active Link Styling
