@@ -82,6 +82,9 @@ Without client side routing, the browser will serialize the form's data automati
 👉 Export an action function from app/root.tsx
 
 ## Updating Data
+
 ## Updating Contacts with FormData
 
 The edit route we just created already renders a form. All we need to do is add the action function. Remix will serialize the form, POST it with fetch, and automatically revalidate all the data.
+
+## Redirecting new records to the edit page
