@@ -105,3 +105,5 @@ export const action = async () => {
 ## Global Pending UI
 
 ## Deleting Records
+
+## Index Routes
