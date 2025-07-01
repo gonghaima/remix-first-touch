@@ -103,3 +103,5 @@ export const action = async () => {
 ## Active Link Styling
 
 ## Global Pending UI
+
+## Deleting Records
