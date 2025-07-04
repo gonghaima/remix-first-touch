@@ -110,4 +110,6 @@ export const action = async () => {
 
 ## Cancel Button
 
-## useNavigate
+useNavigate
+
+## URLSearchParams and GET Submissions
