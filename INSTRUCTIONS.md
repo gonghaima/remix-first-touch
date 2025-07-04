@@ -113,3 +113,8 @@ export const action = async () => {
 useNavigate
 
 ## URLSearchParams and GET Submissions
+
+## Synchronizing URLs to Form State
+👉 Return q from your loader, set it as the input's default value
+
+
