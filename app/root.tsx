@@ -9,7 +9,8 @@ import {
   useLoaderData,
   useNavigation,
 } from '@remix-run/react';
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
+import { useState } from 'react';
 import { redirect } from '@remix-run/node';
 
 import type { LinksFunction, LoaderFunctionArgs } from '@remix-run/node';
@@ -37,12 +38,25 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
 export default function App() {
   const { contacts, q } = useLoaderData<typeof loader>();
   const navigation = useNavigation();
-  useEffect(() => {
-    const searchField = document.getElementById('q');
-    if (searchField instanceof HTMLInputElement) {
-      searchField.value = q || '';
-    }
-  }, [q]);
+  // useEffect(() => {
+  //   const searchField = document.getElementById('q');
+  //   if (searchField instanceof HTMLInputElement) {
+  //     searchField.value = q || '';
+  //   }
+  // }, [q]);
+
+  // the query now needs to be kept in state
+  const [prevQ, setPrevQ] = useState(q);
+  const [query, setQuery] = useState(q || '');
+
+  // We can avoid using `useEffect` to synchronize the query
+  // by using a separate piece of state to store the previous
+  // value
+  if (q !== prevQ) {
+    setPrevQ(q);
+    setQuery(q || '');
+  }
+
   return (
     <html lang="en">
       <head>
@@ -59,10 +73,12 @@ export default function App() {
               <input
                 id="q"
                 aria-label="Search contacts"
+                name="q"
                 defaultValue={q || ''}
                 placeholder="Search"
                 type="search"
-                name="q"
+                // synchronize user's input to component state
+                onChange={(event) => setQuery(event.currentTarget.value)}
               />
               <div id="search-spinner" aria-hidden hidden={true} />
             </Form>
