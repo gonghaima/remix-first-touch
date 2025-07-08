@@ -8,6 +8,7 @@ import {
   ScrollRestoration,
   useLoaderData,
   useNavigation,
+  useSubmit,
 } from '@remix-run/react';
 // import { useEffect } from 'react';
 import { useState } from 'react';
@@ -38,6 +39,7 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
 export default function App() {
   const { contacts, q } = useLoaderData<typeof loader>();
   const navigation = useNavigation();
+  const submit = useSubmit();
   // useEffect(() => {
   //   const searchField = document.getElementById('q');
   //   if (searchField instanceof HTMLInputElement) {
@@ -69,7 +71,11 @@ export default function App() {
         <div id="sidebar">
           <h1>Remix Contacts</h1>
           <div>
-            <Form id="search-form" role="search">
+            <Form
+              id="search-form"
+              onChange={(event) => submit(event.currentTarget)}
+              role="search"
+            >
               <input
                 id="q"
                 aria-label="Search contacts"

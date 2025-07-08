@@ -115,8 +115,8 @@ useNavigate
 ## URLSearchParams and GET Submissions
 
 ## Synchronizing URLs to Form State
+
 👉 Return q from your loader, set it as the input's default value
 👉 Synchronize input value with the URLSearchParams
 
-
-
+## Submitting Form's onChange
