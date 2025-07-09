@@ -120,3 +120,5 @@ useNavigate
 👉 Synchronize input value with the URLSearchParams
 
 ## Submitting Form's onChange
+
+## Adding Search Spinner
