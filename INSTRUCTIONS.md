@@ -122,3 +122,5 @@ useNavigate
 ## Submitting Form's onChange
 
 ## Adding Search Spinner
+## Managing the History Stack
+
