@@ -122,5 +122,16 @@ useNavigate
 ## Submitting Form's onChange
 
 ## Adding Search Spinner
+
 ## Managing the History Stack
+
+## Forms Without Navigation
+👉 Change the ```<Favorite>``` form to a fetcher form
+```
+const fetcher = useFetcher();
+```
+replace Form with fetcher.Form
+
+👉 Create the action
+
 
